@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infografía Gitea</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .infografia {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    .integrantes {
+      background-color: #eaf2f8;
+      border-left: 5px solid #3498db;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      color: #2c3e50;
+    }
+
+    .integrantes h2 {
+      margin-top: 0;
+      color: #21618c;
+    }
+
+    .integrantes ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 10px 0 0 0;
+    }
+
+    .integrantes li {
+      padding: 5px 0;
+    }
+
+    .paso {
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+      gap: 20px;
+    }
+
+    .paso:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .texto {
+      flex: 1;
+    }
+
+    .texto h2 {
+      color: #3498db;
+      margin-top: 0;
+    }
+
+    .texto p {
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .texto ul {
+      padding-left: 20px;
+      color: #333;
+    }
+
+    .imagen {
+      flex: 1;
+    }
+
+    .imagen img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .paso {
+        flex-direction: column !important;
+      }
+
+      .imagen img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="infografia">
+
+    <!-- Sección de integrantes -->
+    <div class="integrantes">
+      <h2>👥 Integrantes del grupo</h2>
+      <ul>
+        <li>Salas Calsi Jorge Luis</li>
+        <li>Suble Lima Denilson Rivaldo</li>
+        <li>Pauccara Huillca Nelson Luis</li>
+        <li>Guevara Grandez Guido Gabriel</li>
+        <li>León Quispe Cristhian Hemerson</li>
+      </ul>
+    </div>
+
+    <h1>🚀 Infografía: Uso básico de Gitea</h1>
+
+    <div class="paso">
+      <div class="imagen">
+        <img src="images/01.jpeg" alt="Registro de usuario en Gitea">
+      </div>
+      <div class="texto">
+        <h2>👤 1. Creación de usuario</h2>
+        <p>Accede a tu instancia Gitea y regístrate:</p>
+        <ul>
+          <li>Haz clic en <strong>Registrarse</strong>.</li>
+          <li>Completa nombre de usuario, correo y contraseña.</li>
+          <li>Confirma y accede a tu cuenta.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="paso">
+      <div class="imagen">
+        <img src="images/03.jpeg" alt="Creación de repositorio en Gitea">
+      </div>
+      <div class="texto">
+        <h2>📁 2. Creación de repositorio</h2>
+        <p>Desde tu panel principal:</p>
+        <ul>
+          <li>Haz clic en <strong>+ New Repository</strong>.</li>
+          <li>Define nombre, descripción y visibilidad.</li>
+          <li>Inicializa con README si lo deseas.</li>
+          <li>Haz clic en <strong>Create Repository</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="paso">
+      <div class="imagen">
+        <img src="images/06.jpeg" alt="Invitación de colaboradores en Gitea">
+      </div>
+      <div class="texto">
+        <h2>🤝 3. Invitación de colaboradores</h2>
+        <p>Para trabajar en equipo:</p>
+        <ul>
+          <li>Entra al repositorio creado.</li>
+          <li>Ve a <strong>Settings</strong> → <strong>Collaborators</strong>.</li>
+          <li>Agrega el nombre del colaborador.</li>
+          <li>Define permisos y haz clic en <strong>Add</strong>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
