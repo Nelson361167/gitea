@@ -83,13 +83,137 @@
 
     .imagen {
       flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .imagen img {
+    .image-container {
       width: 100%;
       max-width: 400px;
+      height: 250px;
       border-radius: 8px;
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f8f9fa;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Estilos para las imágenes creadas con CSS */
+    .user-icon {
+      width: 80px;
+      height: 80px;
+      background: #3498db;
+      border-radius: 50%;
+      position: relative;
+    }
+    
+    .user-icon::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: white;
+      top: 20px;
+      left: 20px;
+    }
+    
+    .user-icon::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 30px;
+      background: white;
+      border-radius: 10px 10px 0 0;
+      bottom: 0;
+      left: 10px;
+    }
+
+    .repo-icon {
+      width: 100px;
+      height: 80px;
+      background: #2ecc71;
+      border-radius: 10px;
+      position: relative;
+    }
+    
+    .repo-icon::before {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 10px;
+      background: #27ae60;
+      top: 20px;
+      left: 10px;
+      border-radius: 2px;
+    }
+    
+    .repo-icon::after {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 10px;
+      background: #27ae60;
+      top: 40px;
+      left: 10px;
+      border-radius: 2px;
+    }
+
+    .collab-icon {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .person {
+      width: 50px;
+      height: 50px;
+      background: #e74c3c;
+      border-radius: 50%;
+      position: relative;
+    }
+    
+    .person::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: white;
+      top: 12px;
+      left: 12px;
+    }
+    
+    .person::after {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 18px;
+      background: white;
+      border-radius: 8px 8px 0 0;
+      bottom: 0;
+      left: 7px;
+    }
+    
+    .plus-sign {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      color: #7f8c8d;
+    }
+    
+    .person:nth-child(2) {
+      background: #9b59b6;
+    }
+    
+    .person:nth-child(3) {
+      background: #f39c12;
     }
 
     @media (max-width: 768px) {
@@ -97,7 +221,7 @@
         flex-direction: column !important;
       }
 
-      .imagen img {
+      .image-container {
         max-width: 100%;
       }
     }
@@ -122,7 +246,9 @@
 
     <div class="paso">
       <div class="imagen">
-        <img src="images/01.jpeg" alt="Registro de usuario en Gitea">
+        <div class="image-container">
+          <div class="user-icon"></div>
+        </div>
       </div>
       <div class="texto">
         <h2>👤 1. Creación de usuario</h2>
@@ -137,7 +263,9 @@
 
     <div class="paso">
       <div class="imagen">
-        <img src="images/03.jpeg" alt="Creación de repositorio en Gitea">
+        <div class="image-container">
+          <div class="repo-icon"></div>
+        </div>
       </div>
       <div class="texto">
         <h2>📁 2. Creación de repositorio</h2>
@@ -153,7 +281,13 @@
 
     <div class="paso">
       <div class="imagen">
-        <img src="images/06.jpeg" alt="Invitación de colaboradores en Gitea">
+        <div class="image-container">
+          <div class="collab-icon">
+            <div class="person"></div>
+            <div class="plus-sign">+</div>
+            <div class="person"></div>
+          </div>
+        </div>
       </div>
       <div class="texto">
         <h2>🤝 3. Invitación de colaboradores</h2>
